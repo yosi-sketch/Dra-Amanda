@@ -119,7 +119,10 @@ export default function LadyJusticeCanvas({
 }: LadyJusticeCanvasProps) {
   const mountRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef(scrollProgress);
-  scrollRef.current = scrollProgress;
+
+  useEffect(() => {
+    scrollRef.current = scrollProgress;
+  }, [scrollProgress]);
 
   const [loading, setLoading] = useState(true);
   const [loadProgress, setLoadProgress] = useState(0);
@@ -190,18 +193,18 @@ export default function LadyJusticeCanvas({
     fillLight.position.set(-3.5, 2.0, 2.5);
     scene.add(fillLight);
 
-    // DEDICATED EXECUTIVE BLUE (#2563eb) RIM LIGHT - Suave e aristocrático
-    const sapphireRimLight = new THREE.PointLight(0x2563eb, 4.5, 8.5);
+    // Warm gold rim light to match the firm's identity.
+    const sapphireRimLight = new THREE.PointLight(0xd99a30, 4.5, 8.5);
     sapphireRimLight.position.set(1.4, 1.4, -1.2);
     scene.add(sapphireRimLight);
 
     // Dedicated Executive Blue Directional Silhouette Light from behind
-    const blueSilhouetteLight = new THREE.DirectionalLight(0x1d4ed8, 2.2);
+    const blueSilhouetteLight = new THREE.DirectionalLight(0x99570f, 2.2);
     blueSilhouetteLight.position.set(-0.8, 2.6, -4.0);
     scene.add(blueSilhouetteLight);
 
     // Subtle Blue Back-Halo behind torso to separate from dark background
-    const blueBackHalo = new THREE.PointLight(0x38bdf8, 2.5, 6.0);
+    const blueBackHalo = new THREE.PointLight(0xf4c869, 2.5, 6.0);
     blueBackHalo.position.set(0, 0.3, -0.9);
     scene.add(blueBackHalo);
 

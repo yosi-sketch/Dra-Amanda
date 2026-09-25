@@ -17,30 +17,25 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Matheus Ferreira | Escritório de Advocacia",
+  title: "Dra. Amanda Ferraz | Advocacia em Belo Horizonte",
   description:
-    "Técnica, Firmeza e Estratégia. Soluções jurídicas empresariais e criminais de excelência para pessoas e corporações em todo o Brasil.",
+    "Advocacia humanizada em Belo Horizonte. Atendimento em Direito de Família e Consumidor com clareza, atenção e responsabilidade.",
   keywords: [
-    "Matheus Ferreira",
-    "Matheus Ferreira Escritório de Advocacia",
-    "advogado BH",
-    "direito empresarial",
-    "direito criminal",
-    "consultoria jurídica",
-    "soluções jurídicas",
+    "Dra. Amanda Ferraz",
+    "Amanda Ferraz Advogada",
+    "advogada Belo Horizonte",
+    "direito de família",
+    "direito do consumidor",
+    "divórcio",
+    "pensão alimentícia",
+    "advogada Belo Horizonte",
+    "Serasa",
     "advocacia Belo Horizonte",
   ],
   icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png" },
-      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
-      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
-    ],
-    shortcut: "/favicon.ico",
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/apple-icon.png",
   },
 };
 
@@ -50,8 +45,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${jakarta.variable} ${cormorant.variable} scroll-smooth dark`}>
-      <body className="min-h-screen bg-[#07090e] text-[#f1f5f9] font-sans antialiased selection:bg-[#2563eb] selection:text-white overflow-x-clip">
+    <html lang="pt-BR" className={`${jakarta.variable} ${cormorant.variable} scroll-smooth`}>
+      <body className="min-h-screen bg-[#f7f4ed] text-[#2b261e] font-sans antialiased selection:bg-[#80643d] selection:text-white overflow-x-clip">
         {children}
       </body>
     </html>
